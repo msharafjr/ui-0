@@ -1,0 +1,6 @@
+.form-control {
+	display: block;
+	border: 2px solid var(--dark-color);
+	padding: .375rem .75rem;
+	font-size: 1rem;
+}
