@@ -1,0 +1,28 @@
+header.header.txt--upper
+	.container
+		.header__inner
+			.header__logo
+				h1.visually-hidden CIC - Contemporary Image Collective
+				a.logo( href='/', title='Contemporary Image Collective' )
+					img.logo__brand( alt='Brand', src="https://via.placeholder.com/142x70" )
+					img.logo__name( alt='Name', src="https://via.placeholder.com/142x70/000000/ffff00" )
+			nav.header__nav
+				ul.list.list--inline
+					li: a.link( href='/about' ) about
+					li: a.link( href='/projects' ) projects
+					li: a.link( href='/materials' ) materials
+					li: a.link( href='/archive' ) archive
+					li: a.link( href='/photolab' ) photolab
+					li: a.link( href='/education' ) education
+					li: a.link( href='/ar' ) عربي
+			form.header__search-form( action='/search', target='_blank' )
+				label.visually-hidden( for='search_q') Search
+				input.form-control#search_q( type='text', name='q', placeholder='SEARCH' )
+				button.visually-hidden( type='submit' ) Search
+			.header__social
+				a.link( href='javascript:' ) follow
+				ul.list.social-list
+					li: a.link( href='https://www.facebook.com', target='_blank', rel='noreferrer' ) facebook
+					li: a.link( href='https://www.twitter.com', target='_blank', rel='noreferrer' ) twitter
+					li: a.link( href='https://www.instagram.com', target='_blank', rel='noreferrer' ) instagram
+					li: a.link( href='/newsletter' ) newsletter

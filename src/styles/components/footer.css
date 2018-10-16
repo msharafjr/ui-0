@@ -1,0 +1,14 @@
+.footer {
+	margin: 30px auto;
+	font-size: var(--text-size);
+	font-weight: 700;
+
+	.list .link {
+		display: inline-block;
+		padding: 18px 5px;
+	}
+}
+
+[dir='rtl'] .footer {
+	font-size: 20px;
+}
