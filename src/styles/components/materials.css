@@ -1,4 +1,4 @@
-main {
+.materials {
 	.col {
 		display: flex;
 		flex-wrap: wrap;
@@ -44,6 +44,7 @@ main {
 			margin-right: 7px;
 			border: 2px solid var(--dark-color);
 			padding: 5px 10px;
+			background-color: var(--white-color);
 			font-size: 16px;
 			cursor: pointer;
 			text-transform: uppercase;

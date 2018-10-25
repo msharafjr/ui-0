@@ -30,7 +30,7 @@
 @import "components/header.css";
 @import "components/footer.css";
 @import "components/entry.css";
-@import "components/grid.page.css";
+@import "components/materials.css";
 
 /* Utilities – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class */
 @import 'utilities/lists.css';
