@@ -1,0 +1,46 @@
+main.archive
+	.container
+		.row.row--6
+			.col
+				.archive__entry-title
+					- const chars = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' ];
+					each char in chars
+						ol.list
+							li.char #{ char }
+							- for ( let i = 0; i < 3; i++ ) {
+								li: a.link( href='javascript:void(0)' ) #{ char }Title - Subtitle
+							- }
+			.col
+				ul.list.archive__years.align-center
+					- for ( let i = 2018; i >= 2000; i-- ) {
+						li: a.link( href='javascript:void(0)' ) #{i}
+					- }
+			.col
+				.archive__entry-author
+					each char in chars
+						ol.list
+							li.char #{ char }
+							- for ( let i = 0; i < 3; i++ ) {
+								li: a.link( href='javascript:void(0)' ) #{ char }Name
+							- }
+				
+			.col
+				- for ( let i = 0; i < 7; i++ ) {
+					.subentry
+						.entry__img
+							a( href='/ebtry' )
+								img.img--fit( src='https://via.placeholder.com/170x170/949494/ffffff' alt='title - subtitle' )
+				- }
+			.col
+				- const tags = [ 'talk', 'reading', 'lecture', 'workshop', 'project', 'exhibition', 'performance', 'screenings', 'installation', 'salon', 'publication' ];
+				.archive__tag.txt--upper
+					- for ( let i = 0; i < 2; i++ ) {
+						each tag in tags
+							p: a.link( href='javascript:void(0)' ) #{ tag }
+					- }
+			.col
+				.archive__tag.txt--upper
+					- for ( let i = 0; i < 4; i++ ) {
+						each tag in tags
+							p: a.link( href='javascript:void(0)' ) #{ tag }
+					- }
