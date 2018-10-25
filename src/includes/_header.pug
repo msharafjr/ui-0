@@ -2,19 +2,18 @@ header.header.txt--upper
 	.container
 		.header__inner
 			.header__logo
-				h1.visually-hidden CIC - Contemporary Image Collective
+				if  page === 'index'
+					h1.visually-hidden CIC - Contemporary Image Collective
+				else
+					h2.visually-hidden CIC - Contemporary Image Collective
 				a.logo( href='/', title='Contemporary Image Collective' )
 					img.logo__brand( alt='Brand', src="https://via.placeholder.com/142x70" )
 					img.logo__name( alt='Name', src="https://via.placeholder.com/142x70/000000/ffff00" )
 			nav.header__nav
 				ul.list.list--inline
-					li: a.link( href='/about' ) about
-					li: a.link( href='/projects' ) projects
-					li: a.link( href='/materials' ) materials
-					li: a.link( href='/archive' ) archive
-					li: a.link( href='/photolab' ) photolab
-					li: a.link( href='/education' ) education
-					li: a.link( href='/ar' ) عربي
+					- const links = [ 'about', 'projects', 'materials', 'archive', 'photolab', 'education', 'ar' ]
+					each link in links
+						li: a( class=`link ${ page === link ? 'active': '' }` href= '/' + link ) #{ link === 'ar' ? 'عربي' : link }
 			form.header__search-form( action='/search', target='_blank' )
 				label.visually-hidden( for='search_q') Search
 				input.form-control#search_q( type='text', name='q', placeholder='SEARCH' )
