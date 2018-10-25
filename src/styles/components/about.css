@@ -1,0 +1,39 @@
+.about {
+
+	.about__team {
+		text-transform: capitalize;
+
+		h4 {
+			margin-bottom: 35px;
+		}
+
+		.member {
+			p a {
+				text-transform: none;
+			}
+
+			+ .member {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	.about__disc {
+		font-size: 35px;
+	}
+
+	.about__info {
+		p + p {
+			margin-top: 20px;
+		}
+	}
+
+	.board {
+		margin-top: 30px;
+		text-transform: capitalize;
+
+		h4 {
+			margin-bottom: 10px;
+		}
+	}
+}
