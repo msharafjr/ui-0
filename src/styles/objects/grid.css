@@ -15,7 +15,7 @@
 
 .row > .col {
 	width: 100%;
-	float: left;
+	float: inline-start;
 	padding-left: var(--gutter);
 	padding-right: var(--gutter);
 }
@@ -36,6 +36,14 @@
 	width: 25%;
 }
 
+.row--4 > .col--2 {
+	width: 50%;
+}
+
+.row--6 > .col {
+	width: 16.66%;
+}
+
 .row--3-2 > .col--2 {
 	/* width: 38.80%; */
 	width: 40%;
@@ -44,4 +52,16 @@
 .row--3-2 > .col--3 {
 	/* width: 61.20%; */
 	width: 60%;
+}
+
+.row--3-2-1 > .col--1 {
+	width: 25%;
+}
+
+.row--3-2-1 > .col--2 {
+	width: 30%;
+}
+
+.row--3-2-1 > .col--3 {
+	width: 45%;
 }

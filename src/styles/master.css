@@ -1,5 +1,5 @@
 /*
-	main css file => master.css
+	master.css
 */
 
 /* Settings – used with preprocessors and contain font, colors definitions, etc. */
@@ -28,16 +28,14 @@
 
 /* Components – specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components */
 @import "components/header.css";
-@import "components/entries.css";
 @import "components/footer.css";
+@import "components/entry.css";
+@import "components/entries.css";
+
 
 /* Utilities – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class */
-@import 'utilities/floats.css';
-@import "utilities/clearfix.css";
 @import 'utilities/lists.css';
 @import "utilities/tags.css";
-@import 'utilities/relative-height.css';
-@import 'utilities/full-background.css';
 @import 'utilities/text-align.css';
 @import 'utilities/screen-reader.css';
 @import 'utilities/text-transform.css';
