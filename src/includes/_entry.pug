@@ -37,15 +37,15 @@ main
 						p.title Title
 						p.subtitle Subtitle
 		.row.row--4
-			.col CONTRIBUTER LIST
+			.col.contributer-list.order--last CONTRIBUTER LIST
 			.col.col--2.description
-				- for (var i = 0; i < 6; i++) {
+				- for ( let i = 0; i < 6; i++ ) {
 					p We’re happy to invite you to Submerged – on rivers and their interrupted flow, the first programme in our new space in Talaat Harb street. Submerged extends over more than two months and consists of an exhibition, screenings, discussions and a workshop.
 				- }
-			.col.related
+			.col.related.order--last
 				h4 RELATED
-				- for (var i = 0; i < 3; i++) {
-					.subentry
+				- for ( let i = 0; i < 3; i++ ) {
+					.subentry.txt--capitalize
 						.entry__img
 							a( href='/ebtry' )
 								img.img--fit( src='https://via.placeholder.com/170x170/949494/ffffff' alt='title - subtitle' )

@@ -5,26 +5,14 @@
 
 	&.entry__main--end {
 		margin-inline-end: auto;
-
-		.entry__content {
-			margin-inline-start: 11rem;
-		}
 	}
 
 	&.entry__main--start {
 		margin-inline-start: auto;
-
-		.entry__content {
-			margin-inline-start: -2rem;
-		}
 	}
 
 	.entry__content {
-		position: absolute;
 		top: -1rem;
-		width: 440px;
-		max-height: calc(100% - 10rem);
-		border: 2px solid var(--dark-color);
 		padding: 16px;
 		background-color: var(--white-color);
 		overflow: hidden;
@@ -32,28 +20,21 @@
 	}
 
 	.entry__img {
-		position: absolute;
 		width: 100%;
-		height: 100%;
 		background-color: var(--dark-color);
 		overflow: hidden;
-		border: 1px dashed var(--gray-border);
 
 		&:hover {
 			z-index: 2;
 		}
 
 		img {
+			display: block;
 			width: 100%;
 			height: 100%;
 			background-color: var(--dark-color);
 			object-fit: contain;
 			object-position: center;
-
-			&.img--circle {
-				object-fit: cover;
-				border-radius: 50%;
-			}
 		}
 	}
 }
@@ -70,6 +51,7 @@
 		background-color: var(--dark-color);
 
 		img {
+			display: block;
 			width: 100%;
 			height: 100%;
 			object-fit: contain;

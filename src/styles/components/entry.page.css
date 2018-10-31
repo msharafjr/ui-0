@@ -6,9 +6,10 @@ main {
 		}
 
 		.img--active {
-			display: inline-block;
+			/* display: inline-block; */
 		}
 	}
+
 	.controllers {
 		p span {
 			font-size: var(--title-size);
@@ -18,6 +19,7 @@ main {
 			margin-top: 10px;
 		    padding: 12px;
 		    border: 0;
+			background-color: var(--white-color);
 			background-repeat: no-repeat;
 		    background-position: 50% 50%;
 		    cursor: pointer;
@@ -53,6 +55,7 @@ main {
 			border: 2px solid var(--dark-color);
 			padding: 4px 25px;
 			font-size: 18px;
+			background-color: var(--white-color);
 			cursor: pointer;
 			text-transform: uppercase;
 			transition: 0.1s ease-in;
@@ -101,6 +104,99 @@ main {
 
 		&[title='Previous'] {
 			background-image: url(/images/next.png);
+		}
+	}
+}
+
+
+@media only screen and (max-width: 767px) {
+	.row--3 > .col--2 {
+		width: 100%;
+	}
+
+	.entry {
+		width: 100%;
+		height: auto;
+
+		&.entry__main--start {
+			margin-inline-start: unset;
+			display: flex;
+		}
+	}
+
+	.row--3 > .controllers {
+		margin-top: 20px;
+		width: 100%;
+
+		.row {
+			.col:first-child {
+				text-align: center;
+				margin-bottom: 10px;
+			}
+
+			.col {
+				width: 100%;
+			}
+		}
+	}
+
+	.row--4 {
+		section header .row {
+			font-size: 12px;
+		}
+
+		> .col:first-child {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 15px;
+		}
+
+		> .col--2 {
+			width: 100%;
+		}
+
+		.col.contributer-list {
+			margin-top: 20px;
+		}
+
+		.col.related {
+			margin-top: 20px;
+			width: 100%;
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.row--4 {
+		> .col--2 {
+			width: 75%;
+		}
+
+		.col.related {
+			margin-top: 20px;
+			width: 100%;
+
+			.subentry {
+				float: left;
+				width: 33.33%;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.row--4 {
+		> .col--2 {
+			width: 50%;
+		}
+
+		.col.related {
+			width: 25%;
+
+			.subentry {
+				float: none;
+				width: 100%;
+			}
 		}
 	}
 }
