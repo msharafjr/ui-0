@@ -1,7 +1,8 @@
 header.header.txt--upper
 	.container
+		input( type='checkbox' id='trigger' ).visually-hidden
 		.header__inner
-			.header__logo
+			.header__item.header__logo
 				if  page === 'index'
 					h1.visually-hidden CIC - Contemporary Image Collective
 				else
@@ -9,19 +10,24 @@ header.header.txt--upper
 				a.logo( href='/', title='Contemporary Image Collective' )
 					img.logo__brand( alt='Brand', src="https://via.placeholder.com/142x70" )
 					img.logo__name( alt='Name', src="https://via.placeholder.com/142x70/000000/ffff00" )
-			nav.header__nav
+			nav.header__item.header__nav
 				ul.list.list--inline
 					- const links = [ 'about', 'projects', 'materials', 'archive', 'photolab', 'education', 'ar' ]
 					each link in links
 						li: a( class=`link ${ page === link ? 'active': '' }` href= '/' + link ) #{ link === 'ar' ? 'عربي' : link }
-			form.header__search-form( action='/search', target='_blank' )
+			form.header__item.header__search-form( action='/search', target='_blank' )
 				label.visually-hidden( for='search_q') Search
 				input.form-control#search_q( type='text', name='q', placeholder='SEARCH' )
 				button.visually-hidden( type='submit' ) Search
-			.header__social
+			.header__item.header__social
 				a.link( href='javascript:' ) follow
 				ul.list.social-list
 					li: a.link( href='https://www.facebook.com', target='_blank', rel='noreferrer' ) facebook
 					li: a.link( href='https://www.twitter.com', target='_blank', rel='noreferrer' ) twitter
 					li: a.link( href='https://www.instagram.com', target='_blank', rel='noreferrer' ) instagram
 					li: a.link( href='/newsletter' ) newsletter
+			.header__item.trigger
+				label( for='trigger')
+					- for ( let i = 0; i < 3; i++ ) {
+						span
+					- }
