@@ -14,7 +14,7 @@ const browserify = require('browserify');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 const sourcemaps = require('gulp-sourcemaps');
-// const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -23,7 +23,7 @@ let dev = false;
 
 gulp.task('styles', () => {
 	return gulp
-		.src('./src/styles/master.css')
+		.src('./src/styles/*.css')
 		.pipe(sourcemaps.init())
 		.pipe($.plumber())
 		.pipe($.postcss())
