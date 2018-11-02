@@ -3,6 +3,10 @@ header.header.txt--upper
 		input( type='checkbox' id='trigger' ).visually-hidden
 		.header__inner
 			.header__item.header__logo
+				if  page === 'index'
+					h1.visually-hidden CIC - مركز الصورة المعاصرة
+				else
+					h2.visually-hidden مركز الصورة المعاصرة
 				h1.visually-hidden مركز الصورة المعاصرة
 				a.logo( href='/', title='مركز الصورة المعاصرة' )
 					img.logo__brand( alt='Brand', src="https://via.placeholder.com/142x70" )
@@ -29,6 +33,6 @@ header.header.txt--upper
 					li: a.link( href='/ar/newsletter' ) النشرة الاخبارية
 			.header__item.trigger
 				label( for='trigger')
-					- for ( let i = 0; i < 3; i++ ) {
+					- for ( let i = 0; i < 6; i++ ) {
 						span
 					- }
