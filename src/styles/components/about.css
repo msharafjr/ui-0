@@ -1,6 +1,7 @@
 .about {
 
 	.about__team {
+		margin-bottom: 30px;
 		text-transform: capitalize;
 
 		h4 {
@@ -20,6 +21,7 @@
 
 	.about__disc {
 		font-size: 35px;
+		margin-bottom: 30px;
 	}
 
 	.about__info {
@@ -34,6 +36,64 @@
 
 		h4 {
 			margin-bottom: 10px;
+		}
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.about {
+		.order--last {
+			order: 1;
+		}
+
+		.row--3-2-1 {
+			&> .col--1 {
+				width: 50%;
+			}
+
+			&> .col--2 {
+				width: 50%;
+			}
+
+			&> .col--3 {
+				width: 75%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.about {
+		.about__disc {
+			border-bottom: 1px solid var(--dark-color);
+			padding-bottom: 20px;
+			font-size: 25px;
+		}
+
+		.about__team {
+			border-bottom: 1px solid var(--dark-color);
+			padding-bottom: 20px;
+		}
+
+		.row--3-2-1 {
+			&> .col--1 {
+				width: 75%;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+
+			&> .col--2 {
+				width: 100%;
+			}
+
+			&> .col--3 {
+				width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+			}
 		}
 	}
 }

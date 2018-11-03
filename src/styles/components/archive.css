@@ -1,5 +1,9 @@
 .archive {
 
+	.col {
+		margin-bottom: 20px;
+	}
+
 	ol {
 		li.char {
 			margin-bottom: 15px;

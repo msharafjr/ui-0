@@ -12,3 +12,23 @@
 [dir='rtl'] .footer {
 	font-size: 20px;
 }
+
+@media only screen and (max-width: 991px) {
+	.footer {
+		font-size: 14px;
+
+		.list .link {
+			padding: 10px 5px;
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			width: 80%;
+			height: 1px;
+			margin: 0 auto 10px;
+			background-color: var(--dark-color);
+			opacity: 0.5;
+		}
+	}
+}
