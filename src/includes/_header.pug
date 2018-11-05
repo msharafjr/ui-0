@@ -1,6 +1,6 @@
 header.header.txt--upper
 	.container
-		input( type='checkbox' id='trigger' ).visually-hidden
+		input( type='checkbox' id='trigger' aria-hidden='true' hidden='true' ).visually-hidden
 		.header__inner
 			.header__item.header__logo
 				if  page === 'index'
@@ -26,8 +26,8 @@ header.header.txt--upper
 					li: a.link( href='https://www.twitter.com', target='_blank', rel='noreferrer' ) twitter
 					li: a.link( href='https://www.instagram.com', target='_blank', rel='noreferrer' ) instagram
 					li: a.link( href='/newsletter' ) newsletter
-			.header__item.trigger
-				label( for='trigger')
+			.header__item.trigger( aria-hidden='true' )
+				label( for='trigger' )
 					- for ( let i = 0; i < 6; i++ ) {
 						span
 					- }
