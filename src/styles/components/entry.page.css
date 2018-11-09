@@ -4,10 +4,6 @@ main {
 			display: none;
 			position: absolute;
 		}
-
-		.img--active {
-			/* display: inline-block; */
-		}
 	}
 
 	.controllers {
@@ -92,19 +88,6 @@ main {
 	.related h4 {
 		text-align: center;
 		margin-bottom: 20px;
-	}
-}
-
-
-[dir="rtl"] .entry__img-controllers {
-	p button {
-		&[title='Next'] {
-			background-image: url(/images/prev.png);
-		}
-
-		&[title='Previous'] {
-			background-image: url(/images/next.png);
-		}
 	}
 }
 
