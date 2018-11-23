@@ -1,0 +1,21 @@
+main.materials
+	.container
+		.row.row--3
+			- for ( let i = 0; i < 9; i++ ) {
+				.col
+					.subentry.txt--capitalize
+						.entry__img
+							a( href='/entry' )
+								img.img--fit( src='https://via.placeholder.com/300x300/949494/ffffff' alt='title - subtitle' )
+						p: time.dtstart( datetime='2018-10-09' property='published' title='9 October 2018' ) 9 october 2018
+						a.link.entry__title.txt--capitalize( href='/entry' )
+							h3
+								span.title submerged
+								span.subtitle on rivers and their interrupted flow
+						blockquote.entry__info
+							p We’re happy to invite you to <em>Submerged – on rivers and their interrupted flow</em>, the first programme in our new space in Talaat Harb street. <em>Submerged</em> extends over more than two months and consists of an exhibition, screenings, discussions and a workshop.
+					.subentry__actions
+						button video
+						button text
+						button audio
+			- }

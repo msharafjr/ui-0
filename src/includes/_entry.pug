@@ -1,0 +1,56 @@
+main
+	.container
+		.row.row--3
+			.col.col--2
+				.entry.entry__main--start
+					.entry__img
+						a( href='javascript:' )
+							img.img--active( src='https://via.placeholder.com/500x500' alt='Submerged; on rivers and their interrupted flow' )
+							img.img( src='https://via.placeholder.com/500x500' alt='Submerged; on rivers and their interrupted flow' )
+			.col.controllers
+				.row
+					.col
+						p: span 1/2
+						p: button( title='Next' )
+							span.visually-hidden next
+						p: button( title='Previous' disabled='disabled' )
+							span.visually-hidden previous
+					.col
+						p We’re happy to invite you to Submerged – on rivers and their interrupted flow, the first programme in our new space in Talaat Harb street. Submerged extends over more than two months and consists of an exhibition, screenings, discussions and a workshop.
+		.row.row--4
+			.col: button share
+			.col.col--2
+				section
+					header
+						.row.row--2
+							.col
+								p.entry__period
+									time( datetime='2020-12-31T05:00-07:00' title='9 Oct 2018 - 15 Dec 2018' ) current
+								p.entry__tags.tags--comma-seperator
+									span.tag exhibition
+									span.tag talks
+									span.tag workshop
+							.col.align-center
+								p: time.dtstart( datetime='2018-10-09' property='published' title='9 October 2018' ) 9 october
+								p: time.dtend( datetime='2018-12-15' title='15 December 2018' ) 15 december
+					h1
+						p.title Title
+						p.subtitle Subtitle
+		.row.row--4
+			.col.contributer-list.order--last CONTRIBUTER LIST
+			.col.col--2.description
+				- for ( let i = 0; i < 6; i++ ) {
+					p We’re happy to invite you to Submerged – on rivers and their interrupted flow, the first programme in our new space in Talaat Harb street. Submerged extends over more than two months and consists of an exhibition, screenings, discussions and a workshop.
+				- }
+			.col.related.order--last
+				h4 RELATED
+				- for ( let i = 0; i < 3; i++ ) {
+					.subentry.txt--capitalize
+						.entry__img
+							a( href='/ebtry' )
+								img.img--fit( src='https://via.placeholder.com/170x170/949494/ffffff' alt='title - subtitle' )
+						a.link( href='entry')
+							p.title submerged
+							p.subtitle on rivers and their interrupted flow
+				- }
+				

@@ -1,0 +1,18 @@
+.tags--comma-seperator .tag + .tag::before {
+	content: ',';
+	margin-inline-end: 5px;
+}
+
+.tags--comma-seperator .tag + .tag:last-child::before {
+	content: 'and';
+	margin-inline-start: 5px;
+}
+
+[dir='rtl'] .tags--comma-seperator .tag + .tag::before {
+	content: '،';
+}
+
+[dir='rtl'] .tags--comma-seperator .tag + .tag:last-child::before {
+	content: 'و';
+	margin-inline-end: 5px;
+}

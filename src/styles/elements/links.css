@@ -1,0 +1,16 @@
+.link {
+	text-decoration: none;
+	color: var(--dark-color);
+
+	&.active {
+		color: var(--blue-color);
+	}
+}
+
+.link:hover {
+	color: var(--blue-color);
+}
+
+.link:hover > * {
+	color: var(--blue-color);
+}

@@ -1,0 +1,38 @@
+header.header.txt--upper
+	.container
+		input( type='checkbox' id='trigger' aria-hidden='true' hidden='true' ).visually-hidden
+		.header__inner
+			.header__item.header__logo
+				if  page === 'index'
+					h1.visually-hidden CIC - مركز الصورة المعاصرة
+				else
+					h2.visually-hidden مركز الصورة المعاصرة
+				h1.visually-hidden مركز الصورة المعاصرة
+				a.logo( href='/', title='مركز الصورة المعاصرة' )
+					img.logo__brand( alt='Brand', src="https://via.placeholder.com/142x70" )
+					img.logo__name( alt='Name', src="https://via.placeholder.com/142x70/000000/ffff00" )
+			nav.header__item.header__nav
+				ul.list.list--inline
+					li: a.link( href='/ar/about' ) حول
+					li: a.link( href='/ar/projects' ) المشروعات
+					li: a.link( href='/ar/materials' ) المواد
+					li: a.link( href='/ar/archive' ) الارشيف
+					li: a.link( href='/ar/photolab' ) معمل الصور
+					li: a.link( href='/ar/education' ) التعليم
+					li: a.link( href='/' ) English
+			form.header__item.header__search-form( action='/search', target='_blank' )
+				label.visually-hidden( for='search_q') ابحث عن
+				input.form-control#search_q( type='text', name='q', placeholder='ابحث' )
+				button.visually-hidden( type='submit' ) بحث
+			.header__item.header__social
+				a.link( href='javascript:' ) تابعنا
+				ul.list.social-list
+					li: a.link( href='https://www.facebook.com/CIC.ContemporaryImageCollective/', target='_blank', rel='noreferrer' ) فيس بوك
+					li: a.link( href='https://www.twitter.com/CairoCIC', target='_blank', rel='noreferrer' ) تويتر
+					li: a.link( href='https://www.instagram.com/ciccairo', target='_blank', rel='noreferrer' ) انستغرام
+					li: a.link( href='/ar/newsletter' ) النشرة الاخبارية
+			.header__item.trigger( aria-hidden='true' )
+				label( for='trigger' )
+					- for ( let i = 0; i < 6; i++ ) {
+						span
+					- }
